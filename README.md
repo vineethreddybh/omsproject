@@ -68,3 +68,34 @@ A beginner-friendly, full-stack **Order Management System** built with **Java Sp
   |     PostgreSQL DB      |
   |  (Local / AWS RDS)     |
   +------------------------+
+
+Frontend (HTML/JS/React) 
+    |
+    | HTTP (POST /auth/signup)
+    v
+[UserController]  --> handles HTTP request
+    |
+    v
+[UserService]     --> business logic
+    |
+    v
+[UserRepository]  --> JPA saves to DB
+    |
+    v
+[PostgreSQL DB]   --> Users table
+
+---
+##Flow
+
+I used Spring Boot’s MVC pattern where:
+
+The UserController handles HTTP requests like signup/signin.
+
+The UserService has the logic to check or register users.
+
+The UserRepository talks to the database.
+
+And User is an Entity mapped to my PostgreSQL table.
+
+
+---
