@@ -1,0 +1,98 @@
+/* Reset and base styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px auto;
+  max-width: 450px;
+  background-color: #f9fafb;
+  color: #333;
+  padding: 10px 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+h2, h3 {
+  color: #34495e;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+form {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 6px rgba(41, 128, 185, 0.3);
+}
+
+button {
+  width: 100%;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1f5d90;
+}
+
+button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+#logoutBtn {
+  background-color: #c0392b;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+#logoutBtn:hover {
+  background-color: #962d22;
+}
+
+pre#orderResult,
+pre#allOrdersList,
+pre#adminUserOrders{
+  background-color: #f0f4f8;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  max-height: 250px;
+  overflow-y: auto;
+  font-family: monospace;
+  white-space: pre-wrap;
+  color: #2c3e50;
+}

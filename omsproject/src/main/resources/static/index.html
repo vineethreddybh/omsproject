@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Order Management System</h1>
+
+<!-- SIGN UP SECTION -->
+<div id="signupSection">
+    <h3>Sign Up</h3>
+    <form id="signupForm">
+        <input type="text" id="signupUsername" placeholder="Username" required><br>
+        <input type="password" id="signupPassword" placeholder="Password" required><br>
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+
+<!-- SIGN IN SECTION -->
+<div id="signinSection">
+    <h3>Sign In</h3>
+    <form id="signinForm">
+        <input type="text" id="signinUsername" placeholder="Username" required><br>
+        <input type="password" id="signinPassword" placeholder="Password" required><br>
+        <button type="submit">Sign In</button>
+    </form>
+</div>
+
+<button id="logoutBtn" style="display:none;">Logout</button>
+
+<!-- ORDER SECTION -->
+<div id="orderSection" style="display:none;">
+    <h2>Create Order</h2>
+    <form id="createOrderForm">
+        <input type="text" id="productName" placeholder="Product Name" required><br>
+        <input type="number" id="quantity" placeholder="Quantity" required><br>
+        <button type="submit">Create Order</button>
+    </form>
+
+    <h2>Get Order by ID</h2>
+    <form onsubmit="event.preventDefault(); getOrder();">
+        <input type="text" id="getOrderId" placeholder="Order ID" required><br>
+        <button type="submit">Get Order</button>
+    </form>
+    <pre id="orderResult"></pre>
+
+    <h2>Update Order Status</h2>
+    <form onsubmit="event.preventDefault(); updateOrderStatus();">
+        <input type="text" id="updateOrderId" placeholder="Order ID" required><br>
+        <input type="text" id="newStatus" placeholder="New Status (e.g., SHIPPED)" required><br>
+        <button type="submit">Update Status</button>
+    </form>
+</div>
+
+<!-- ADMIN: View All Orders -->
+<div id="adminSection" style="display:none;">
+    <h2>📋 All Orders (Admin Only)</h2>
+    <button onclick="fetchAllOrders()">Refresh Orders</button>
+    <pre id="allOrdersList"></pre>
+
+    <h2>Admin: Get Orders by User</h2>
+    <form onsubmit="event.preventDefault(); getOrdersByUser();">
+        <input type="text" id="adminSearchUsername" placeholder="Enter username">
+        <button type="submit">Get Orders</button>
+    </form>
+    <pre id="adminUserOrders"></pre>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
